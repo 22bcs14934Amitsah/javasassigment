@@ -1,0 +1,31 @@
+const NFTs = [];
+
+function mintNFT(_name, _hairColour, _shoeType) {
+    const NFT = {
+        "name": _name,
+        "hairColour": _hairColour,
+        "shoeType": _shoeType
+    };
+    NFTs.push(NFT);
+    console.log("Minted: " + _name);
+}
+
+function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log("\nID=\t\t" + (i + 1));
+        console.log("name:\t\t" + NFTs[i].name);
+        console.log("hairColour:\t\t" + NFTs[i].hairColour);
+        console.log("shoeType:\t\t" + NFTs[i].shoeType);
+    }
+}
+
+function getTotalSupply() {
+    console.log("\nTotal Supply: " + NFTs.length);
+}
+
+mintNFT("Amit", "black", "sport");
+mintNFT("bishal", "black", "sport");
+mintNFT("bikas", "black", "classic");
+
+listNFTs();
+getTotalSupply();
